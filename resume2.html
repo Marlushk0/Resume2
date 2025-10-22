@@ -14,154 +14,114 @@
       --accent-dark: #0b9b98; --glass: rgba(14,165,163,0.08); font-family: 'Inter',
       system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
       } *{box-sizing: border-box} body{margin:0;background:var(--bg);color:#0f172a;line-height:1.4}
-      .container{max-width:900px;margin:32px auto;padding:24px} /* Card */ .card{background:var(--card);border-radius:14px;box-shadow:0
-      8px 30px rgba(2,6,23,0.08);overflow:hidden;display:grid;grid-template-columns:300px
-      1fr} @media (max-width:800px){.card{grid-template-columns:1fr}} /* Left
-      column */ .left{padding:28px;background:linear-gradient(180deg,var(--card),var(--glass));border-right:1px
-      solid rgba(15,23,42,0.04)} .avatar {
-  width: 80px;                        /* width = 80px */
-  height: 80px;                       /* height = 80px */
-  min-width: 80px;                     /* prevent flex shrinking */
-  min-height: 80px;                    /* ensure square shape */
-  border-radius: 50%;                  /* makes it circular */
-  background-image: url('Resumephoto.png');  /* your photo */
-  background-size: cover;              /* fills the circle */
-  background-position: center;         /* centers the photo */
-  background-repeat: no-repeat;
-  flex-shrink: 0;                      /* prevents shrinking in flex containers */
-}
-      .name{margin-top:16px;font-size:20px;font-weight:700} .title{margin-top:6px;color:var(--muted);font-weight:600}
-      .contact{margin-top:18px;font-size:14px} .contact p{margin:8px 0;color:var(--muted)}
-      .section{margin-top:22px} .section h3{font-size:13px;letter-spacing:0.8px;text-transform:uppercase;color:var(--muted);margin:0
-      0 12px} .skill{display:flex;flex-wrap:wrap;gap:8px} .skill .pill{background:var(--glass);padding:6px
-      10px;border-radius:999px;font-weight:600;font-size:13px} .progress{height:8px;background:#eef2f7;border-radius:999px;overflow:hidden}
+      .container{max-width:900px;margin:32px auto;padding:24px;position:relative}
+      .student-id {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+      .card{background:var(--card);border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.08);overflow:hidden;display:grid;grid-template-columns:300px 1fr}
+      @media (max-width:800px){.card{grid-template-columns:1fr}}
+      .left{padding:28px;background:linear-gradient(180deg,var(--card),var(--glass));border-right:1px solid rgba(15,23,42,0.04)}
+      .avatar {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+        border-radius: 50%;
+        background-image: url('Resumephoto.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+      }
+      .name{margin-top:16px;font-size:20px;font-weight:700}
+      .title{margin-top:6px;color:var(--muted);font-weight:600}
+      .contact{margin-top:18px;font-size:14px}
+      .contact p{margin:8px 0;color:var(--muted)}
+      .section{margin-top:22px}
+      .section h3{font-size:13px;letter-spacing:0.8px;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+      .skill{display:flex;flex-wrap:wrap;gap:8px}
+      .skill .pill{background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+      .progress{height:8px;background:#eef2f7;border-radius:999px;overflow:hidden}
       .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-dark))}
-      /* Right column */ .right{padding:28px} .summary{font-size:15px;color:#111827}
-      .job{margin-top:18px} .job .heading{display:flex;justify-content:space-between;align-items:flex-start}
-      .job h4{margin:0;font-size:15px} .job .meta{color:var(--muted);font-size:13px}
-      .job p{margin:8px 0 0;color:#374151} .edu{margin-top:14px} /* Footer /
-      print */ .print-hide{display:inline-block} @media print{body{background:white}.container{max-width:100%;margin:0;padding:0}.card{box-shadow:none;border-radius:0}.left{border-right:none}.print-hide{display:none}}
-      /* Utility */ .muted{color:var(--muted)} .space{height:10px}
+      .right{padding:28px}
+      .summary{font-size:15px;color:#111827}
+      .job{margin-top:18px}
+      .job .heading{display:flex;justify-content:space-between;align-items:flex-start}
+      .job h4{margin:0;font-size:15px}
+      .job .meta{color:var(--muted);font-size:13px}
+      .job p{margin:8px 0 0;color:#374151}
+      .edu{margin-top:14px}
+      .print-hide{display:inline-block}
+      @media print{
+        body{background:white}
+        .container{max-width:100%;margin:0;padding:0}
+        .card{box-shadow:none;border-radius:0}
+        .left{border-right:none}
+        .print-hide{display:none}
+      }
+      .muted{color:var(--muted)}
+      .space{height:10px}
     </style>
   </head>
   
   <body>
     <div class="container">
+      <div class="student-id">Student ID: 114021151</div>
       <div class="card" role="document">
         <aside class="left" aria-label="sidebar">
           <div style="display:flex;gap:16px;align-items:center">
             <div class="avatar"></div>
             <div>
-              <div class="name">
-                Maralgoo Nyamjav
-              </div>
-              <div class="title">
-                Information Systems Student / Data Analyst
-              </div>
+              <div class="name">Maralgoo Nyamjav</div>
+              <div class="title">Information Systems Student / Data Analyst</div>
             </div>
           </div>
           <div class="contact">
-            <p>
-              <strong>
-                Email:
-              </strong>
-              Maralgoo5353@gmail.com
-            </p>
-            <p>
-              <strong>
-                Phone:
-              </strong>
-              +886 9x-xxx-xxxx
-            </p>
-            <p>
-              <strong>
-                Location:
-              </strong>
-              Taichung, Taiwan
-            </p>
-            <p>
-              <strong>
-                LinkedIn:
-              </strong>
-              linkedin.com/in/yourname
-            </p>
+            <p><strong>Email:</strong> Maralgoo5353@gmail.com</p>
+            <p><strong>Phone:</strong> +886 9x-xxx-xxxx</p>
+            <p><strong>Location:</strong> Taichung, Taiwan</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
           </div>
           <div class="section">
-            <h3>
-              Skills
-            </h3>
+            <h3>Skills</h3>
             <div class="skill">
-              <span class="pill">
-                Python
-              </span>
-              <span class="pill">
-                SQL
-              </span>
-              <span class="pill">
-                Excel
-              </span>
-              <span class="pill">
-                Power BI
-              </span>
-              <span class="pill">
-                C#
-              </span>
-              <span class="pill">
-                HTML & CSS
-              </span>
+              <span class="pill">Python</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Excel</span>
+              <span class="pill">Power BI</span>
+              <span class="pill">C#</span>
+              <span class="pill">HTML & CSS</span>
             </div>
-            <div class="space">
-            </div>
+            <div class="space"></div>
             <div>
-              <div class="muted" style="font-size:13px;margin-bottom:6px">
-                Data Visualization
-              </div>
-              <div class="progress" aria-hidden="true">
-                <i style="width:78%">
-                </i>
-              </div>
+              <div class="muted" style="font-size:13px;margin-bottom:6px">Data Visualization</div>
+              <div class="progress" aria-hidden="true"><i style="width:78%"></i></div>
             </div>
             <div style="margin-top:10px">
-              <div class="muted" style="font-size:13px;margin-bottom:6px">
-                Statistical Analysis
-              </div>
-              <div class="progress" aria-hidden="true">
-                <i style="width:70%">
-                </i>
-              </div>
+              <div class="muted" style="font-size:13px;margin-bottom:6px">Statistical Analysis</div>
+              <div class="progress" aria-hidden="true"><i style="width:70%"></i></div>
             </div>
           </div>
           <div class="section">
-            <h3>
-              Languages
-            </h3>
-            <p class="muted">
-              Mongolian (Native)
-            </p>
-            <p class="muted">
-              English (Advanced — IELTS 7)
-            </p>
-            <p class="muted">
-              Chinese (Beginner)
-            </p>
+            <h3>Languages</h3>
+            <p class="muted">Mongolian (Native)</p>
+            <p class="muted">English (Advanced — IELTS 7)</p>
+            <p class="muted">Chinese (Beginner)</p>
           </div>
           <div class="section">
-            <h3>
-              Education
-            </h3>
-            <p style="margin:6px 0;font-weight:700">
-              Asia University — Dual Degree
-            </p>
-            <p class="muted">
-              Information Systems Management, expected 2027
-            </p>
+            <h3>Education</h3>
+            <p style="margin:6px 0;font-weight:700">Asia University — Dual Degree</p>
+            <p class="muted">Information Systems Management, expected 2027</p>
           </div>
         </aside>
         <main class="right" aria-label="main content">
           <section>
-            <h2 style="margin:0;font-size:20px">
-              Professional Summary
-            </h2>
+            <h2 style="margin:0;font-size:20px">Professional Summary</h2>
             <p class="summary">
               Motivated second-year Information Systems Management student with internship
               experience in product management. Strong foundation in data analysis, visualization,
@@ -173,16 +133,10 @@
           <section class="job">
             <div class="heading">
               <div>
-                <h4>
-                  Product Management Intern — Interactive LLC
-                </h4>
-                <div class="meta">
-                  Jan 6 — Jan 24, 2025 · Mongolia
-                </div>
+                <h4>Product Management Intern — Interactive LLC</h4>
+                <div class="meta">Jan 6 — Jan 24, 2025 · Mongolia</div>
               </div>
-              <div class="muted" style="text-align:right">
-                Key achievements
-              </div>
+              <div class="muted" style="text-align:right">Key achievements</div>
             </div>
             <p>
               Worked with cross-functional teams to document product requirements, prepared
@@ -193,16 +147,10 @@
           <section class="job">
             <div class="heading">
               <div>
-                <h4>
-                  Barista — Small Bakery
-                </h4>
-                <div class="meta">
-                  8 months · Customer service & beverage preparation
-                </div>
+                <h4>Barista — Small Bakery</h4>
+                <div class="meta">8 months · Customer service & beverage preparation</div>
               </div>
-              <div class="muted" style="text-align:right">
-                Customer-facing experience
-              </div>
+              <div class="muted" style="text-align:right">Customer-facing experience</div>
             </div>
             <p>
               Prepared beverages, handled point-of-sale, and maintained cleanliness.
@@ -210,22 +158,14 @@
             </p>
           </section>
           <section style="margin-top:20px">
-            <h3 style="margin:0 0 12px">
-              Projects
-            </h3>
+            <h3 style="margin:0 0 12px">Projects</h3>
             <div class="job">
               <div class="heading">
                 <div>
-                  <h4>
-                    Wine Quality Analysis (Course Project)
-                  </h4>
-                  <div class="meta">
-                    Python, Pandas, sklearn
-                  </div>
+                  <h4>Wine Quality Analysis (Course Project)</h4>
+                  <div class="meta">Python, Pandas, sklearn</div>
                 </div>
-                <div class="muted">
-                  Exploratory data analysis & regression
-                </div>
+                <div class="muted">Exploratory data analysis & regression</div>
               </div>
               <p>
                 Performed EDA, feature engineering, and built baseline regression models
@@ -235,16 +175,10 @@
             <div class="job">
               <div class="heading">
                 <div>
-                  <h4>
-                    Notepad-like Windows App (Personal)
-                  </h4>
-                  <div class="meta">
-                    C# · Windows Forms
-                  </div>
+                  <h4>Notepad-like Windows App (Personal)</h4>
+                  <div class="meta">C# · Windows Forms</div>
                 </div>
-                <div class="muted">
-                  UI & file handling
-                </div>
+                <div class="muted">UI & file handling</div>
               </div>
               <p>
                 Built a text editor with tabbed interface, status bar, and basic file
@@ -253,17 +187,11 @@
             </div>
           </section>
           <section style="margin-top:20px">
-            <h3 style="margin:0 0 12px">
-              Certifications & Activities
-            </h3>
-            <p class="muted">
-              IELTS 7 · Teaching experience · Volunteer language tutor
-            </p>
+            <h3 style="margin:0 0 12px">Certifications & Activities</h3>
+            <p class="muted">IELTS 7 · Teaching experience · Volunteer language tutor</p>
           </section>
           <section style="margin-top:24px;display:flex;gap:12px;align-items:center;justify-content:space-between">
-            <div style="font-size:13px;color:var(--muted)">
-              References available upon request
-            </div>
+            <div style="font-size:13px;color:var(--muted)">References available upon request</div>
             <div>
               <button onclick="window.print()" style="border:none;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;font-weight:700;cursor:pointer">
                 Print / Save PDF
@@ -276,4 +204,3 @@
   </body>
 
 </html>
-
